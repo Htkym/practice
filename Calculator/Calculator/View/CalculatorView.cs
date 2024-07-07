@@ -7,6 +7,7 @@ public partial class CalculatorView : Form, IView
         InitializeComponent();
     }
 
+    // TODO: Buttonを基底/派生でコンポーネント化してください。
     public Button Button0 => button0;
     public Button Button1 => button1;
     public Button Button2 => button2;

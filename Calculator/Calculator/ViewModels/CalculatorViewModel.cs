@@ -8,6 +8,7 @@ using System.Windows.Input;
 
 namespace Calculator.ViewModels;
 
+//MEMO: 複雑化するようであれば。ViewModelを分割しましょう。
 public class CalculatorViewModel : ViewModelBase<ICalculatorModel>
 {
     private readonly ILogger _logger;

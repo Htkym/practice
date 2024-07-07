@@ -2,6 +2,7 @@
 
 namespace Calculator.Commands;
 
+//TODO: コマンドを分けてください。ReactiveCommandの場合は不要。
 public class RelayCommand(Action<object> executeAction, Func<object, bool> canExecute = null) : ICommand
 {
     public event EventHandler CanExecuteChanged;
