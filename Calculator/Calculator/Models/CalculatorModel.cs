@@ -23,6 +23,7 @@ public class CalculatorModel : ICalculatorModel
         A = null;
         TempNumber = string.Empty;
         Confirmed = string.Empty;
+        Result = string.Empty;
     }
 
     public void DoOperation()
@@ -51,7 +52,7 @@ public class CalculatorModel : ICalculatorModel
                     throw new Exception("You cannot divide by ZERO!");
                 }
                     
-                A += B;
+                A /= B;
                 B = null;
                 break;
 

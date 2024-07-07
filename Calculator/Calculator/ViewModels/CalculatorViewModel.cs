@@ -38,17 +38,17 @@ public class CalculatorViewModel : ViewModelBase<ICalculatorModel>
             else
                 State = State.OnInputPeriod(Model);
 
-            Show();
+            ShowImput();
         });
 
         OnButtonOperationCommand = new RelayCommand(o => { State = State.OnInputOperation(Model, (Arithmetics)o); ShowTemp(); });
 
         OnButtonEquelCommand = new RelayCommand(_ => { State = State.OnInputEqual(Model); ShowResult(); });
 
-        OnButtonClearCommand = new RelayCommand(_ => { State = State.OnInputClear(Model); Show(); });
+        OnButtonClearCommand = new RelayCommand(_ => { State = State.OnInputClear(Model); ShowResult(); });
     }
 
-    private void Show()
+    private void ShowImput()
     {
         Display.Value = Model.TempNumber;
 
